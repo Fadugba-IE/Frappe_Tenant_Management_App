@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "autoname": "field:first_name",
+ "creation": "2021-02-08 14:04:19.559249",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "first_name",
+  "occupation",
+  "full_name",
+  "age",
+  "column_break_3",
+  "last_name",
+  "marital_status",
+  "section_break_6",
+  "house_address",
+  "flat_number",
+  "rent_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Data",
+   "label": "Marital Status"
+  },
+  {
+   "fieldname": "house_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "House Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flat_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Property Occupied",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_status",
+   "fieldtype": "Select",
+   "label": "Rent Status",
+   "options": "Paid\nNot paid\nPartly Paid"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-02-09 11:29:50.165708",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Tenant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

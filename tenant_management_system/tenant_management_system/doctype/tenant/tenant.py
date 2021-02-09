@@ -7,6 +7,5 @@ from __future__ import unicode_literals
 from frappe.model.document import Document
 
 class Tenant(Document):
-	pass
-def before_save(self):
+	def before_save(self):
 		self.full_name = f'{self.first_name} {self.last_name or ""}'

@@ -3,7 +3,7 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 class TenancyAgreement(Document):
@@ -11,10 +11,10 @@ class TenancyAgreement(Document):
 		exists = frappe.db.exists(
 			"Tenancy Agreement",
 			{
-				"Tenant": self.Tenant,
+				"tenant": self.tenant,
 				"docstatus": 1,
-				"to_date": (">", self.from_date),
+				"due_date": (">", self.start_date),
 			},
 		)
 		if exists:
-			frappe.throw("There is an Tenacy Agreement for this member")
+			frappe.throw("There is a Running Tenacy Agreement for this member, Kindly check the system for more information")

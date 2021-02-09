@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "TA between {tenant_name} and {property_owner}",
+ "autoname": "format:Tenancy Agreement Between {tenant_name} and {property_owner}",
  "creation": "2021-02-08 14:36:12.893983",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,24 +8,15 @@
  "field_order": [
   "tenant",
   "tenant_name",
-  "amended_from",
   "owner",
   "property_owner",
   "start_date",
   "due_date",
   "payment_status",
-  "amount_paid"
+  "amount_paid",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Tenancy Agreement",
-   "print_hide": 1,
-   "read_only": 1
-  },
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
@@ -49,7 +40,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "Tenant.full_name",
+   "fetch_from": "tenant.full_name",
    "fieldname": "tenant_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -57,7 +48,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "Owner.full_name",
+   "fetch_from": "owner.full_name",
    "fieldname": "property_owner",
    "fieldtype": "Data",
    "label": "Property Owner",
@@ -76,12 +67,21 @@
    "fieldtype": "Select",
    "label": "Payment Status",
    "options": "Paid\nNot Paid\nPartly Paid"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tenancy Agreement",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-09 17:39:14.520576",
+ "modified": "2021-02-09 22:21:02.034340",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenancy Agreement",

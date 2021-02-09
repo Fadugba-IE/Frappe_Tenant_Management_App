@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "field:first_name",
+ "autoname": "format: DD}-{MM}-{YY}-{first_name}-{last_name}",
  "creation": "2021-02-08 14:04:19.559249",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,16 +8,11 @@
  "field_order": [
   "tenant",
   "first_name",
-  "occupation",
   "full_name",
-  "age",
-  "column_break_3",
   "last_name",
-  "marital_status",
-  "section_break_6",
-  "house_address",
-  "flat_number",
-  "rent_status"
+  "occupation",
+  "age",
+  "marital_status"
  ],
  "fields": [
   {
@@ -32,36 +27,9 @@
   },
   {
    "fieldname": "marital_status",
-   "fieldtype": "Data",
-   "label": "Marital Status"
-  },
-  {
-   "fieldname": "house_address",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "House Address",
-   "reqd": 1
-  },
-  {
-   "fieldname": "flat_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Name of Property Occupied",
-   "reqd": 1
-  },
-  {
-   "fieldname": "rent_status",
    "fieldtype": "Select",
-   "label": "Rent Status",
-   "options": "Paid\nNot paid\nPartly Paid"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_6",
-   "fieldtype": "Section Break"
+   "label": "Marital Status",
+   "options": "Married\nSingle\nDivorced"
   },
   {
    "fieldname": "first_name",
@@ -87,13 +55,12 @@
    "fieldname": "tenant",
    "fieldtype": "Link",
    "label": "Tenant",
-   "options": "Tenant",
-   "reqd": 1
+   "options": "Tenant"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 11:29:50.165708",
+ "modified": "2021-02-09 22:05:48.795861",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenant",

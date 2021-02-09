@@ -8,7 +8,6 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "owner",
   "first_name",
   "last_name",
   "full_name",
@@ -84,19 +83,12 @@
    "fieldname": "property_image",
    "fieldtype": "Attach Image",
    "label": "Property Image"
-  },
-  {
-   "fieldname": "owner",
-   "fieldtype": "Link",
-   "label": "Owner",
-   "options": "Owner",
-   "reqd": 1
   }
  ],
  "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 17:15:21.572363",
+ "modified": "2021-02-09 22:35:59.817327",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Owner",

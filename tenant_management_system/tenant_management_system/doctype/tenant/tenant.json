@@ -13,7 +13,8 @@
   "route",
   "occupation",
   "age",
-  "marital_status"
+  "marital_status",
+  "profile_image"
  ],
  "fields": [
   {
@@ -56,12 +57,17 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "label": "Profile Image"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-10 16:03:45.443078",
+ "modified": "2021-02-10 21:18:23.649305",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenant",

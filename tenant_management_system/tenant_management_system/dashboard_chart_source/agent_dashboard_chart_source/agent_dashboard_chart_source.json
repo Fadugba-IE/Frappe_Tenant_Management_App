@@ -1,0 +1,13 @@
+{
+ "creation": "2021-02-10 23:41:28.534510",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-02-10 23:41:28.534510",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Agent Dashboard Chart Source",
+ "owner": "Administrator",
+ "source_name": "Agent Dashboard Chart Source",
+ "timeseries": 1
+}

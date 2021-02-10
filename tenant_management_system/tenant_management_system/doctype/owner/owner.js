@@ -2,7 +2,12 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Owner', {
-	// refresh: function(frm) {
-
-	// }
+    refresh: function(frm) {
+        frm.add_custom_button('Create Tenancy Agreement', () => {
+            frappe.new_doc('Tenancy Agreement', {
+                owner: frm.doc.name
+            })
+        })
+      
+    }
 });

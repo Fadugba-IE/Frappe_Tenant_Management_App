@@ -1,15 +1,16 @@
 {
  "actions": [],
- "autoname": "format: DD}-{MM}-{YY}-{first_name}-{last_name}",
+ "allow_guest_to_view": 1,
+ "autoname": "format: {DD}-{MM}-{YY}-{first_name}-{last_name}",
  "creation": "2021-02-08 14:04:19.559249",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tenant",
   "first_name",
   "full_name",
   "last_name",
+  "route",
   "occupation",
   "age",
   "marital_status"
@@ -52,15 +53,15 @@
    "read_only": 1
   },
   {
-   "fieldname": "tenant",
-   "fieldtype": "Link",
-   "label": "Tenant",
-   "options": "Tenant"
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 22:05:48.795861",
+ "modified": "2021-02-10 16:03:45.443078",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenant",
@@ -91,6 +92,7 @@
    "write": 1
   }
  ],
+ "route": "tenant",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

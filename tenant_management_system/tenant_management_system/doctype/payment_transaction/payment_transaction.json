@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "autoname": "format:Payment Transaction for {property_name}-{transaction_date_and_time}}",
+ "creation": "2021-02-10 11:04:56.833118",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amount_paid",
+  "by",
+  "owner",
+  "property_name",
+  "property_type",
+  "transaction_date_and_time",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Paid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "By",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Transaction Date and Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Transaction",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "owner.property_type",
+   "fieldname": "property_type",
+   "fieldtype": "Data",
+   "label": "Property_type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "owner.property_name",
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "For Property Owned by",
+   "options": "Owner",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-02-10 12:31:42.421393",
+ "modified_by": "Administrator",
+ "module": "Tenant Management System",
+ "name": "Payment Transaction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Agent",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Tenant",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

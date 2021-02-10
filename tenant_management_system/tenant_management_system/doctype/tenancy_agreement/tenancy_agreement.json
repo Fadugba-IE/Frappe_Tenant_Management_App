@@ -14,7 +14,10 @@
   "due_date",
   "payment_status",
   "amount_paid",
-  "amended_from"
+  "section_break_9",
+  "agent_signature",
+  "column_break_11",
+  "tenant_signature"
  ],
  "fields": [
   {
@@ -30,7 +33,7 @@
   {
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
-   "label": "Amount Paid"
+   "label": "Amount To be Paid"
   },
   {
    "fieldname": "tenant",
@@ -69,19 +72,28 @@
    "options": "Paid\nNot Paid\nPartly Paid"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Tenancy Agreement",
-   "print_hide": 1,
-   "read_only": 1
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agent_signature",
+   "fieldtype": "Signature",
+   "label": "Agent Signature"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_signature",
+   "fieldtype": "Signature",
+   "label": "Tenant Signature"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-09 22:21:02.034340",
+ "modified": "2021-02-10 12:34:30.185805",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenancy Agreement",

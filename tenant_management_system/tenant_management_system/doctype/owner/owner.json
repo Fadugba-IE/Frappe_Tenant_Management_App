@@ -2,7 +2,7 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "field:property_name",
+ "autoname": "format: {first_name}-{last_name}",
  "creation": "2021-02-08 14:14:28.892685",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -88,7 +88,7 @@
  "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 22:35:59.817327",
+ "modified": "2021-02-10 12:32:22.781011",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Owner",
@@ -126,7 +126,6 @@
    "read": 1,
    "report": 1,
    "role": "Tenant",
-   "select": 1,
    "share": 1
   }
  ],

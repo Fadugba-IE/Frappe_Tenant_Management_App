@@ -6,5 +6,5 @@ from __future__ import unicode_literals
 # import frappe
 from frappe.model.document import Document
 
-class Property(Document):
+class PaymentTransaction(Document):
 	pass

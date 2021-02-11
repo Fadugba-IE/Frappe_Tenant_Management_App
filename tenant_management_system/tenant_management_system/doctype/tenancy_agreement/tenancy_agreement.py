@@ -17,4 +17,4 @@ class TenancyAgreement(Document):
 			},
 		)
 		if exists:
-			frappe.throw("There is a Running Tenacy Agreement for this member, Kindly check the system for more information")
+			frappe.throw("There is a Running Tenacy Agreement for this Tenant, Kindly check the system for more information")

@@ -73,7 +73,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-10 12:31:42.421393",
+ "modified": "2021-02-11 16:35:45.164796",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Payment Transaction",
@@ -89,6 +89,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -101,6 +102,7 @@
    "report": 1,
    "role": "Agent",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {

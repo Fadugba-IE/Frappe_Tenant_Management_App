@@ -11,13 +11,8 @@
   "first_name",
   "last_name",
   "full_name",
-  "column_break_4",
   "phone",
   "email_address",
-  "section_break_7",
-  "property_name",
-  "property_type",
-  "column_break_10",
   "property_image"
  ],
  "fields": [
@@ -50,45 +45,20 @@
    "unique": 1
   },
   {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "email_address",
    "fieldtype": "Data",
    "label": "Email Address"
   },
   {
-   "fieldname": "section_break_7",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "property_type",
-   "fieldtype": "Select",
-   "label": "Property Type",
-   "options": "Duplex\nThree bedroom Apartment\nTwo bedroom Apartment\nSelf Contain"
-  },
-  {
-   "fieldname": "column_break_10",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "property_name",
-   "fieldtype": "Data",
-   "label": "Property Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
    "fieldname": "property_image",
    "fieldtype": "Attach Image",
-   "label": "Property Image"
+   "label": "Profile Picture"
   }
  ],
  "image_field": "property_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-10 12:32:22.781011",
+ "modified": "2021-02-14 13:04:10.258205",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Owner",

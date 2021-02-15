@@ -1,23 +1,23 @@
 {
  "actions": [],
- "autoname": "format:Tenancy Agreement Between {tenant_name} and {property_owner}",
+ "autoname": "format:Tenancy Agreement Between {tenant_name} and {owner}",
  "creation": "2021-02-08 14:36:12.893983",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tenant",
   "tenant_name",
   "owner",
-  "property_owner",
+  "property",
+  "property_type",
   "start_date",
   "due_date",
-  "payment_status",
   "amount_paid",
   "section_break_9",
   "agent_signature",
   "column_break_11",
-  "tenant_signature"
+  "tenant_signature",
+  "amended_from"
  ],
  "fields": [
   {
@@ -31,45 +31,26 @@
    "label": "Due Date"
   },
   {
+   "fetch_from": "Property.rent_to_be_paid",
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
-   "label": "Amount To be Paid"
+   "label": "Amount To be Paid",
+   "read_only": 1
   },
   {
-   "fieldname": "tenant",
+   "fieldname": "tenant_name",
    "fieldtype": "Link",
-   "label": "Tenant",
+   "in_list_view": 1,
+   "label": "Between(Tenant Name)",
    "options": "Tenant",
    "reqd": 1
   },
   {
-   "fetch_from": "tenant.full_name",
-   "fieldname": "tenant_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Tenant Name",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "owner.full_name",
-   "fieldname": "property_owner",
-   "fieldtype": "Data",
-   "label": "Property Owner",
-   "read_only": 1
-  },
-  {
    "fieldname": "owner",
    "fieldtype": "Link",
-   "label": "Owner",
+   "label": "And (Owner)",
    "options": "Owner",
    "reqd": 1
-  },
-  {
-   "default": "Paid",
-   "fieldname": "payment_status",
-   "fieldtype": "Select",
-   "label": "Payment Status",
-   "options": "Paid\nNot Paid\nPartly Paid"
   },
   {
    "fieldname": "section_break_9",
@@ -88,12 +69,35 @@
    "fieldname": "tenant_signature",
    "fieldtype": "Signature",
    "label": "Tenant Signature"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "For (Property)",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tenancy Agreement",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "property.property_type",
+   "fieldname": "property_type",
+   "fieldtype": "Data",
+   "label": "Property Type",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-10 12:34:30.185805",
+ "modified": "2021-02-14 15:42:40.423959",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Tenancy Agreement",

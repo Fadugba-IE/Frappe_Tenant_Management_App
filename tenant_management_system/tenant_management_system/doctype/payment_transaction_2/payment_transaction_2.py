@@ -4,8 +4,8 @@
 
 from __future__ import unicode_literals
 # import frappe
-from frappe.model.document import Document 
+from frappe.model.document import Document
 
-class PaymentTransaction(Document):
+class PaymentTransaction2(Document):
 	def on_submit(self):
-		self.to_balance = self.rent - self.amount_paid
+		self.balance = self.rent - self.amount_paid

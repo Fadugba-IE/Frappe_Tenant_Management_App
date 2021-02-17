@@ -1,40 +1,26 @@
 {
  "actions": [],
- "autoname": "format:Payment Transaction for {property_name}-{transaction_date_and_time}}",
- "creation": "2021-02-10 11:04:56.833118",
+ "autoname": "format:Payment Transaction for -{property} ",
+ "creation": "2021-02-16 22:51:52.371275",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "amount_paid",
-  "by",
-  "owner",
-  "property_name",
+  "tenant_name",
+  "property",
+  "to",
   "property_type",
-  "transaction_date_and_time",
-  "amended_from"
+  "rent",
+  "amended_from",
+  "payment_method",
+  "transaction_date_and_time"
  ],
  "fields": [
   {
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Amount Paid",
-   "reqd": 1
-  },
-  {
-   "fieldname": "by",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "By",
-   "options": "Tenant",
-   "reqd": 1
-  },
-  {
-   "fieldname": "transaction_date_and_time",
-   "fieldtype": "Datetime",
-   "label": "Transaction Date and Time",
-   "reqd": 1
+   "label": "Amount Paid"
   },
   {
    "fieldname": "amended_from",
@@ -46,34 +32,57 @@
    "read_only": 1
   },
   {
-   "fetch_from": "owner.property_type",
+   "fetch_from": "property.type",
    "fieldname": "property_type",
    "fieldtype": "Data",
-   "label": "Property_type",
-   "read_only": 1,
-   "reqd": 1
+   "label": "Property Type",
+   "read_only": 1
   },
   {
-   "fetch_from": "owner.property_name",
-   "fieldname": "property_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Property Name",
-   "read_only": 1,
-   "reqd": 1
+   "fetch_from": "property.rent_per_annum",
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "label": "Rent",
+   "read_only": 1
   },
   {
-   "fieldname": "owner",
+   "fieldname": "tenant_name",
    "fieldtype": "Link",
-   "label": "For Property Owned by",
-   "options": "Owner",
+   "in_list_view": 1,
+   "label": "by",
+   "options": "Tenant",
    "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "For ",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "property.owner",
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Bank Transfer\nCash\nCryptocurrency"
+  },
+  {
+   "fieldname": "transaction_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Transaction Date and Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-11 16:35:45.164796",
+ "modified": "2021-02-16 23:18:31.288086",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
  "name": "Payment Transaction",
@@ -112,7 +121,8 @@
    "read": 1,
    "report": 1,
    "role": "Tenant",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

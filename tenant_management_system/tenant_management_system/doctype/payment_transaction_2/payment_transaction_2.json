@@ -1,79 +1,40 @@
 {
  "actions": [],
  "autoname": "format:Tenancy Agreement Between {tenant_name} and {owner}",
- "creation": "2021-02-08 14:36:12.893983",
+ "creation": "2021-02-16 22:51:52.371275",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tenant_name",
-  "owner",
-  "property",
-  "property_type",
-  "start_date",
-  "due_date",
   "amount_paid",
-  "section_break_9",
-  "agent_signature",
+  "tenant_name",
+  "property",
+  "to",
+  "property_type",
+  "rent",
+  "balance",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date"
-  },
-  {
-   "fieldname": "due_date",
-   "fieldtype": "Date",
-   "label": "Due Date"
-  },
-  {
-   "fetch_from": "property.rent_per_annum",
    "fieldname": "amount_paid",
-   "fieldtype": "Currency",
-   "label": "Amount To be Paid",
-   "read_only": 1
+   "fieldtype": "Data",
+   "label": "Amount Paid"
   },
   {
    "fieldname": "tenant_name",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Between(Tenant Name)",
+   "label": "by",
    "options": "Tenant",
    "reqd": 1
   },
   {
-   "fieldname": "owner",
-   "fieldtype": "Link",
-   "label": "And (Owner)",
-   "options": "Owner",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_9",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "agent_signature",
-   "fieldtype": "Signature",
-   "label": "Agent Signature"
-  },
-  {
    "fieldname": "property",
    "fieldtype": "Link",
-   "label": "For (Property)",
+   "label": "For ",
    "options": "Property",
    "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Tenancy Agreement",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fetch_from": "property.type",
@@ -81,15 +42,43 @@
    "fieldtype": "Data",
    "label": "Property Type",
    "read_only": 1
+  },
+  {
+   "fetch_from": "property.rent_per_annum",
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "label": "Rent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Transaction 2",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "property.owner",
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To ",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-02-16 21:18:35.817071",
+ "modified": "2021-02-16 22:53:36.415793",
  "modified_by": "Administrator",
  "module": "Tenant Management System",
- "name": "Tenancy Agreement",
+ "name": "Payment Transaction 2",
  "owner": "Administrator",
  "permissions": [
   {
